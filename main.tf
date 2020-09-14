@@ -148,7 +148,7 @@ resource "google_compute_instance" "manager" {
       "sudo ${var.install_script_dest_path}",
     ]
   }
-
+  
   //service_account {
   //  scopes = ["userinfo-email", "compute-ro", "storage-ro"]
   //}
@@ -195,7 +195,6 @@ resource "google_compute_instance" "worker" {
       private_key = file(var.private_key_path)
       agent = false
     }
-
   }
 
   provisioner "remote-exec" {
