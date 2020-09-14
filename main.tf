@@ -104,7 +104,7 @@ resource "google_compute_instance" "manager" {
     initialize_params {
       image = var.project_image
       size = var.project_boot_disk_size
-      type = vat.project_boot_disk_type
+      type = var.project_boot_disk_type
     }
   }
 
